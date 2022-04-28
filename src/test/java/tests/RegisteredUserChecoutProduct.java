@@ -20,7 +20,7 @@ public class RegisteredUserChecoutProduct extends TestBase{
 
 	String firstName="SaRa";
 	String lastName="Hussien";
-	String email="SaRa@hussien.com";
+	String email="S-a1-R-a-11-40-0@hussien.com";
 	String username="saraa";
 	String productName="Apple MacBook Pro 13-inch"; 
 
@@ -84,8 +84,9 @@ public class RegisteredUserChecoutProduct extends TestBase{
 		checkoutObject.viewOrderDetails();
 		Assert.assertTrue(driver.getCurrentUrl().contains("orderdetails"));
 		orderObject = new OrderDetailsPage(driver); 
-		orderObject.DownloadPDFInvoice();
 		orderObject.PrintOrderDetails();
+		orderObject.DownloadPDFInvoice();
+
 	}
 	//logout
 	@Test(priority = 5)

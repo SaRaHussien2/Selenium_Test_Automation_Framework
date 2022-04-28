@@ -1,42 +1,38 @@
 package tests;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import org.json.simple.parser.ParseException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import data.JsonDataReader;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.UserRegistrationPage;
 
-public class UserRegistrationTest extends TestBase {
+public class UserRegistrationWithDDTAndJsonFile extends TestBase {
 
 	HomePage homeObject;
 	UserRegistrationPage registerObject;
 	LoginPage loginpage;
-	String firstName="SaRa";
-	String lastName="Hussien";
-	String email="SaRa@hussien.com";
-	String username="saraa";
-	String password="123456";
-
 
 	@Test(priority = 1,alwaysRun = true)
-	public void UserCanRegisterSuccessfully() {
+	public void UserCanRegisterSuccessfully() throws FileNotFoundException, IOException, ParseException {
+
+		JsonDataReader jsonReader = new JsonDataReader();
+		jsonReader.JsonReader();
 		homeObject = new HomePage(driver);
 		homeObject.openRegistrationLink();
 		registerObject = new UserRegistrationPage(driver);
-		registerObject.userRegisteration(firstName, lastName, email, username, password);
+		registerObject.userRegisteration(jsonReader.firstName, jsonReader.lastName, jsonReader.email, jsonReader.username, jsonReader.password);
 		Assert.assertTrue(registerObject.successMessage.getText().contains("Your registration completed"));
-	}
-
-	@Test(dependsOnMethods = {"UserCanRegisterSuccessfully"})
-	public void RegisteredUserCanLogout() {
 		registerObject.userCanLogout();
-	}
-
-	@Test(dependsOnMethods = {"RegisteredUserCanLogout"})
-	public void RergisteredUserCanLogin() {
 		homeObject.openLoginPage();
 		loginpage=new LoginPage(driver);
-		loginpage.UserLogin(email, password);
+		loginpage.UserLogin(jsonReader.email, jsonReader.password);
 		Assert.assertTrue(registerObject.logoutLink.getText().contains("Log out"));
+		registerObject.userCanLogout();
 	}
 }

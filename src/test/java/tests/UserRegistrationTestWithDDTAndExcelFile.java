@@ -1,42 +1,42 @@
 package tests;
 
+import java.io.IOException;
+
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import data.ExcelReader;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.UserRegistrationPage;
 
-public class UserRegistrationTest extends TestBase {
+public class UserRegistrationTestWithDDTAndExcelFile extends TestBase {
 
 	HomePage homeObject;
 	UserRegistrationPage registerObject;
 	LoginPage loginpage;
-	String firstName="SaRa";
-	String lastName="Hussien";
-	String email="SaRa@hussien.com";
-	String username="saraa";
-	String password="123456";
 
 
-	@Test(priority = 1,alwaysRun = true)
-	public void UserCanRegisterSuccessfully() {
+	@DataProvider(name = "ExcelData")
+	public Object[][] userRegisterData() throws IOException {
+		//read data from Excel Reader class
+		ExcelReader excelreader = new ExcelReader();
+		return excelreader.getExcelData();
+	}
+
+
+	@Test(dataProvider = "ExcelData")
+	public void UserCanRegisterSuccessfully(String firstname , String lastname , String email ,String username, String password) {
 		homeObject = new HomePage(driver);
 		homeObject.openRegistrationLink();
 		registerObject = new UserRegistrationPage(driver);
-		registerObject.userRegisteration(firstName, lastName, email, username, password);
+		registerObject.userRegisteration(firstname, lastname, email, username, password);
 		Assert.assertTrue(registerObject.successMessage.getText().contains("Your registration completed"));
-	}
-
-	@Test(dependsOnMethods = {"UserCanRegisterSuccessfully"})
-	public void RegisteredUserCanLogout() {
 		registerObject.userCanLogout();
-	}
-
-	@Test(dependsOnMethods = {"RegisteredUserCanLogout"})
-	public void RergisteredUserCanLogin() {
 		homeObject.openLoginPage();
 		loginpage=new LoginPage(driver);
 		loginpage.UserLogin(email, password);
 		Assert.assertTrue(registerObject.logoutLink.getText().contains("Log out"));
+		registerObject.userCanLogout();
 	}
 }

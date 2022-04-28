@@ -2,20 +2,22 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import data.LoadProperties;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.UserRegistrationPage;
 
-public class UserRegistrationTest extends TestBase {
+public class UserRegistrationTestWithDDTAndDataPropertiesFile extends TestBase {
 
 	HomePage homeObject;
 	UserRegistrationPage registerObject;
 	LoginPage loginpage;
-	String firstName="SaRa";
-	String lastName="Hussien";
-	String email="SaRa@hussien.com";
-	String username="saraa";
-	String password="123456";
+	String firstName= LoadProperties.userData.getProperty("firstName");
+	String lastName= LoadProperties.userData.getProperty("lastName");
+	String email= LoadProperties.userData.getProperty("email");
+	String username= LoadProperties.userData.getProperty("username");
+	String password= LoadProperties.userData.getProperty("password");
 
 
 	@Test(priority = 1,alwaysRun = true)
