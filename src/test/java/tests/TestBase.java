@@ -16,12 +16,14 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
+
+import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import utilities.Helper;
 
 
 
-public class TestBase {
+public class TestBase extends AbstractTestNGCucumberTests{
 	public static WebDriver driver;
 
 	public static String downloadPath = System.getProperty("user.dir") + "\\Downloads";
@@ -68,6 +70,13 @@ public class TestBase {
 		else if (browserName.equalsIgnoreCase("safari")) {
 			WebDriverManager.safaridriver();
 			driver = new SafariDriver(); 
+		}
+		else if (browserName.equalsIgnoreCase("chrome-headless")) {
+			WebDriverManager.chromedriver().setup();
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--headless");
+			options.addArguments("--window-size=1920,1080");
+			driver = new ChromeDriver(options); 
 		}
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));

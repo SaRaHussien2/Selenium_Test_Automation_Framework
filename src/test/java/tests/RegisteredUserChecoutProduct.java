@@ -20,7 +20,7 @@ public class RegisteredUserChecoutProduct extends TestBase{
 
 	String firstName="SaRa";
 	String lastName="Hussien";
-	String email="S-a1-R-a-11-40-0@hussien.com";
+	String email="S-a1-R-a-11-40v-0@hussien.com";
 	String username="saraa";
 	String productName="Apple MacBook Pro 13-inch"; 
 
@@ -75,10 +75,9 @@ public class RegisteredUserChecoutProduct extends TestBase{
 		checkoutObject = new CheckoutPage(driver);
 		cartObject.openCheckoutPage();
 		checkoutObject.RegisteredUserCheckoutProduct
-		("Egypt", "test address", "123456", "32445566677", "Cairo", productName);
+		(countryName, city, address, postcode, phone, productName);
 		Assert.assertTrue(checkoutObject.prodcutName.isDisplayed());
 		Assert.assertTrue(checkoutObject.prodcutName.getText().contains(productName));
-
 		checkoutObject.confirmOrder();
 		Assert.assertTrue(checkoutObject.thankyouMessage.isDisplayed());
 		checkoutObject.viewOrderDetails();
@@ -86,8 +85,8 @@ public class RegisteredUserChecoutProduct extends TestBase{
 		orderObject = new OrderDetailsPage(driver); 
 		orderObject.PrintOrderDetails();
 		orderObject.DownloadPDFInvoice();
-
 	}
+	
 	//logout
 	@Test(priority = 5)
 	public void RegisteredUserCanLogout() {

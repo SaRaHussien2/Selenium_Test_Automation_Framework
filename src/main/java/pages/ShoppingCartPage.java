@@ -52,4 +52,5 @@ public class ShoppingCartPage extends PageBase {
 		clickButton(agreeCheckBox);
 		clickButton(checkoutBtn);
 	}
+	
 }

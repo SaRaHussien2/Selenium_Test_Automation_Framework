@@ -96,7 +96,8 @@ public class CheckoutPage extends PageBase {
 	public void confirmOrder() {
 		clickButton(confirmOrderBtn);
 	}
-	public void printOrder() {
+	public void clickOnRegisterAsGuestBtn() {
+		clickButton(checkoutAsGuestBtn);
 
 	}
 	public void viewOrderDetails() {

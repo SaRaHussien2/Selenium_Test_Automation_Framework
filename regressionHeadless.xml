@@ -1,0 +1,12 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?> -->
+<!-- <suite  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="testng.xsd"  name="nopcommerce Regression Suite"> -->
+<suite  name="nopcommerce Regression Suite"> 
+<parameter name="browser" value="chrome-headless"> </parameter>
+  <test name="Regression Headless Test" preserve-order="true">
+    <classes>
+      <class name="tests.ChangeCurrencyTest"/>
+      <class name="tests.SearchProductUsingAutoComplete"/>
+    </classes>
+  </test>
+</suite> 

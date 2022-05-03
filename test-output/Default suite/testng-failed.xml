@@ -3,14 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.RegisteredUserChecoutProduct">
+      <class name="runner.TestRunner">
         <methods>
+          <include name="setUpClass"/>
           <include name="startDriver"/>
-          <include name="UserCanCheckoutProduct"/>
+          <include name="tearDownClass"/>
+          <include name="runScenario" invocation-numbers="0"/>
           <include name="stopDriver"/>
           <include name="screenshotOnFailure"/>
         </methods>
-      </class> <!-- tests.RegisteredUserChecoutProduct -->
+      </class> <!-- runner.TestRunner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
