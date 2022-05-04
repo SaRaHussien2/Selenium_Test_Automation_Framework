@@ -25,7 +25,7 @@
 			        <version>3.0.0-M6</version>
 			        <configuration>
 			          <suiteXmlFiles>
-			            <suiteXmlFile>testng.xml</suiteXmlFile>
+			            <suiteXmlFile>${testNGSuite}</suiteXmlFile>
 			          </suiteXmlFiles>
 			        </configuration>
 			      </plugin>
@@ -34,7 +34,7 @@
   </build>
 
 	<profiles>
-<!-- regression Profile-->
+	<!-- regression Profile-->
 		<profile>
 			<id>regression</id>
 			<activation>
@@ -48,7 +48,7 @@
 				<testNGSuite>regression.xml</testNGSuite>
 			</properties>
 		</profile>
-<!-- Full Profile-->
+		<!-- Full Profile-->
 		<profile>
 			<id>full</id>
 			<activation>
@@ -62,7 +62,7 @@
 				<testNGSuite>testng.xml</testNGSuite>
 			</properties>
 		</profile>
-<!-- Headless Profile-->
+		<!-- Headless Profile-->
 		<profile>
 			<id>Headless</id>
 			<activation>
@@ -78,6 +78,7 @@
 		</profile>
 
 	</profiles>
+
 	<dependencies>
 			<dependency>
 			    <groupId>org.testng</groupId>
@@ -96,62 +97,56 @@
 			    <artifactId>webdrivermanager</artifactId>
 			    <version>5.1.1</version>
 			</dependency>
-
-
-
-<dependency>
-    <groupId>org.apache.poi</groupId>
-    <artifactId>poi-ooxml</artifactId>
-    <version>5.2.2</version>
-</dependency>
-<dependency>
-    <groupId>com.opencsv</groupId>
-    <artifactId>opencsv</artifactId>
-    <version>5.6</version>
-</dependency>
-
-<dependency>
-    <groupId>com.github.javafaker</groupId>
-    <artifactId>javafaker</artifactId>
-    <version>1.0.2</version>
-</dependency>
-
-
-<dependency>
-    <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-testng</artifactId>
-    <version>7.3.4</version>
-</dependency>
-<dependency>
-    <groupId>info.cukes</groupId>
-    <artifactId>cucumber-core</artifactId>
-    <version>1.2.6</version>
-    <type>pom</type>
-</dependency>
-
-<dependency>
-    <groupId>com.googlecode.json-simple</groupId>
-    <artifactId>json-simple</artifactId>
-    <version>1.1.1</version>
-</dependency>
-
-<dependency>
-    <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-core</artifactId>
-    <version>7.3.4</version>
-</dependency>
-<dependency>
-    <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-java</artifactId>
-    <version>7.3.4</version>
-</dependency>
-<dependency>
-    <groupId>io.cucumber</groupId>
-    <artifactId>gherkin</artifactId>
-    <version>23.0.1</version>
-</dependency>
-
-
-
+			
+			<dependency>
+			    <groupId>org.apache.poi</groupId>
+			    <artifactId>poi-ooxml</artifactId>
+			    <version>5.2.2</version>
+			</dependency>
+			<dependency>
+			    <groupId>com.opencsv</groupId>
+			    <artifactId>opencsv</artifactId>
+			    <version>5.6</version>
+			</dependency>
+			
+			<dependency>
+			    <groupId>com.github.javafaker</groupId>
+			    <artifactId>javafaker</artifactId>
+			    <version>1.0.2</version>
+			</dependency>
+			
+			<dependency>
+			    <groupId>io.cucumber</groupId>
+			    <artifactId>cucumber-testng</artifactId>
+			    <version>7.3.4</version>
+			</dependency>
+			<dependency>
+			    <groupId>info.cukes</groupId>
+			    <artifactId>cucumber-core</artifactId>
+			    <version>1.2.6</version>
+			    <type>pom</type>
+			</dependency>
+			
+			<dependency>
+			    <groupId>com.googlecode.json-simple</groupId>
+			    <artifactId>json-simple</artifactId>
+			    <version>1.1.1</version>
+			</dependency>
+			
+			<dependency>
+			    <groupId>io.cucumber</groupId>
+			    <artifactId>cucumber-core</artifactId>
+			    <version>7.3.4</version>
+			</dependency>
+			<dependency>
+			    <groupId>io.cucumber</groupId>
+			    <artifactId>cucumber-java</artifactId>
+			    <version>7.3.4</version>
+			</dependency>
+			<dependency>
+			    <groupId>io.cucumber</groupId>
+			    <artifactId>gherkin</artifactId>
+			    <version>23.0.1</version>
+			</dependency>
 	</dependencies>
 </project>
