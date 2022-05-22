@@ -10,6 +10,10 @@ public class LoadProperties {
 	public static Properties userData = 
 			loadProperties(System.getProperty("user.dir")+"\\src\\main\\java\\properties\\userData.properties");
 
+	//Load Sauce Labs AccountSata
+	public static Properties saucelabData= loadProperties(System.getProperty("user.dir")+"\\src\\main\\java\\properties\\SauceLabUserData.properties");
+
+	
 	private static Properties loadProperties(String path) {
 		Properties pro = new Properties();
 		//Stream for reading file

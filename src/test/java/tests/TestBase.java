@@ -5,6 +5,7 @@ import java.util.HashMap;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -66,11 +67,18 @@ public class TestBase extends AbstractTestNGCucumberTests{
 			WebDriverManager.iedriver();
 			driver = new InternetExplorerDriver(); 
 		}
+		
+		else if (browserName.equalsIgnoreCase("edge")) 
+		{
+			WebDriverManager.edgedriver();
+			driver = new EdgeDriver(); 
+		}
 
 		else if (browserName.equalsIgnoreCase("safari")) {
 			WebDriverManager.safaridriver();
 			driver = new SafariDriver(); 
 		}
+		
 		else if (browserName.equalsIgnoreCase("chrome-headless")) {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
@@ -78,6 +86,7 @@ public class TestBase extends AbstractTestNGCucumberTests{
 			options.addArguments("--window-size=1920,1080");
 			driver = new ChromeDriver(options); 
 		}
+		
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.get("https://demo.nopcommerce.com/");

@@ -1,83 +1,176 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="6" total="13" passed="7" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="0" failed="0" skipped="6">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-04T15:07:17 EET" name="nopcommerce Regression Suite" finished-at="2022-05-04T15:07:34 EET" duration-ms="16480">
+  <suite started-at="2022-05-11T05:23:02 EET" name="Regression Suite" finished-at="2022-05-11T05:23:02 EET" duration-ms="591">
     <groups>
-      <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:tests.ProductHoverMenuTest@102ecc22]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:tests.SearchProductTest@7ff35a3f]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:tests.UserRegistrationTestWithDDTAndJavaFaker@6d1dcdff]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:tests.ChangeCurrencyTest@10683d9d]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-      </group> <!-- cucumber -->
     </groups>
-    <test started-at="2022-05-04T15:07:17 EET" name="Regression Suite Test" finished-at="2022-05-04T15:07:34 EET" duration-ms="16480">
-      <class name="tests.ProductHoverMenuTest">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:tests.ProductHoverMenuTest@102ecc22]" started-at="2022-05-04T15:07:29 EET" name="setUpClass" finished-at="2022-05-04T15:07:29 EET" duration-ms="29" status="PASS">
+    <test started-at="2022-05-11T05:23:02 EET" name="Firefox Regression Test" finished-at="2022-05-11T05:23:02 EET" duration-ms="568">
+      <class name="tests.UserRegistrationParellelTesting">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.UserRegistrationParellelTesting@e162a35]" started-at="2022-05-11T05:23:02 EET" name="setUp" finished-at="2022-05-11T05:23:02 EET" duration-ms="36" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@60ae7cf2]]>
+                <![CDATA[firefox]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.Error">
+            <message>
+              <![CDATA[Unresolved compilation problems: 
+Illegal modifier for parameter USERNAME; only final is permitted
+Illegal modifier for parameter ACCESS_KEY; only final is permitted
+Illegal modifier for parameter SauceURL; only final is permitted
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Error: Unresolved compilation problems: 
+Illegal modifier for parameter USERNAME; only final is permitted
+Illegal modifier for parameter ACCESS_KEY; only final is permitted
+Illegal modifier for parameter SauceURL; only final is permitted
+
+at tests.TestBase2.setUp(TestBase2.java:50)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:65)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:381)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:319)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:178)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Error -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method signature="UserCanSelectSubCategoryFromMainMenu()[pri:0, instance:tests.ProductHoverMenuTest@102ecc22]" started-at="2022-05-04T15:07:29 EET" name="UserCanSelectSubCategoryFromMainMenu" finished-at="2022-05-04T15:07:31 EET" duration-ms="1525" status="PASS">
+        </test-method> <!-- setUp -->
+        <test-method signature="UserCanRegisterSuccssfully()[pri:1, instance:tests.UserRegistrationParellelTesting@e162a35]" started-at="2022-05-11T05:23:02 EET" name="UserCanRegisterSuccssfully" finished-at="2022-05-11T05:23:02 EET" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Error">
+            <message>
+              <![CDATA[Unresolved compilation problems: 
+Illegal modifier for parameter USERNAME; only final is permitted
+Illegal modifier for parameter ACCESS_KEY; only final is permitted
+Illegal modifier for parameter SauceURL; only final is permitted
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Error: Unresolved compilation problems: 
+Illegal modifier for parameter USERNAME; only final is permitted
+Illegal modifier for parameter ACCESS_KEY; only final is permitted
+Illegal modifier for parameter SauceURL; only final is permitted
+
+at tests.TestBase2.setUp(TestBase2.java:50)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:65)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:381)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:319)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:178)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Error -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- UserCanSelectSubCategoryFromMainMenu -->
-        <test-method is-config="true" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.ProductHoverMenuTest@102ecc22]" started-at="2022-05-04T15:07:31 EET" name="screenshotOnFailure" finished-at="2022-05-04T15:07:31 EET" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=UserCanSelectSubCategoryFromMainMenu status=SUCCESS method=ProductHoverMenuTest.UserCanSelectSubCategoryFromMainMenu()[pri:0, instance:tests.ProductHoverMenuTest@102ecc22] output={null}]]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- UserCanRegisterSuccssfully -->
+        <test-method is-config="true" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.UserRegistrationParellelTesting@e162a35]" started-at="2022-05-11T05:23:02 EET" name="screenshotOnFailure" finished-at="2022-05-11T05:23:02 EET" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- screenshotOnFailure -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:tests.ProductHoverMenuTest@102ecc22]" started-at="2022-05-04T15:07:31 EET" name="tearDownClass" finished-at="2022-05-04T15:07:31 EET" duration-ms="5" status="PASS">
+        <test-method signature="RegisteredUserCanLogout()[pri:0, instance:tests.UserRegistrationParellelTesting@e162a35]" started-at="2022-05-11T05:23:02 EET" name="RegisteredUserCanLogout" finished-at="2022-05-11T05:23:02 EET" depends-on-methods="tests.UserRegistrationParellelTesting.UserCanRegisterSuccssfully" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method tests.UserRegistrationParellelTesting.RegisteredUserCanLogout() on instance tests.UserRegistrationParellelTesting@e162a35 depends on not successfully finished methods 
+[tests.UserRegistrationParellelTesting.UserCanRegisterSuccssfully() on instance tests.UserRegistrationParellelTesting@e162a35]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method tests.UserRegistrationParellelTesting.RegisteredUserCanLogout() on instance tests.UserRegistrationParellelTesting@e162a35 depends on not successfully finished methods 
+[tests.UserRegistrationParellelTesting.UserCanRegisterSuccssfully() on instance tests.UserRegistrationParellelTesting@e162a35]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:149)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- tests.ProductHoverMenuTest -->
-      <class name="tests.SearchProductTest">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:tests.SearchProductTest@7ff35a3f]" started-at="2022-05-04T15:07:31 EET" name="setUpClass" finished-at="2022-05-04T15:07:31 EET" duration-ms="27" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@60ae7cf2]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- RegisteredUserCanLogout -->
+        <test-method signature="RegisteredUserCanLogin()[pri:0, instance:tests.UserRegistrationParellelTesting@e162a35]" started-at="2022-05-11T05:23:02 EET" name="RegisteredUserCanLogin" finished-at="2022-05-11T05:23:02 EET" depends-on-methods="tests.UserRegistrationParellelTesting.RegisteredUserCanLogout" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method tests.UserRegistrationParellelTesting.RegisteredUserCanLogin() on instance tests.UserRegistrationParellelTesting@e162a35 depends on not successfully finished methods 
+[tests.UserRegistrationParellelTesting.RegisteredUserCanLogout() on instance tests.UserRegistrationParellelTesting@e162a35]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method tests.UserRegistrationParellelTesting.RegisteredUserCanLogin() on instance tests.UserRegistrationParellelTesting@e162a35 depends on not successfully finished methods 
+[tests.UserRegistrationParellelTesting.RegisteredUserCanLogout() on instance tests.UserRegistrationParellelTesting@e162a35]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:149)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method signature="UserCanSearchForProducts()[pri:0, instance:tests.SearchProductTest@7ff35a3f]" started-at="2022-05-04T15:07:31 EET" name="UserCanSearchForProducts" finished-at="2022-05-04T15:07:34 EET" duration-ms="2772" status="PASS">
+        </test-method> <!-- RegisteredUserCanLogin -->
+        <test-method is-config="true" signature="stopDriver()[pri:0, instance:tests.UserRegistrationParellelTesting@e162a35]" started-at="2022-05-11T05:23:02 EET" name="stopDriver" finished-at="2022-05-11T05:23:02 EET" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- UserCanSearchForProducts -->
-        <test-method is-config="true" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.SearchProductTest@7ff35a3f]" started-at="2022-05-04T15:07:34 EET" name="screenshotOnFailure" finished-at="2022-05-04T15:07:34 EET" duration-ms="2" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=UserCanSearchForProducts status=SUCCESS method=SearchProductTest.UserCanSearchForProducts()[pri:0, instance:tests.SearchProductTest@7ff35a3f] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- screenshotOnFailure -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:tests.SearchProductTest@7ff35a3f]" started-at="2022-05-04T15:07:34 EET" name="tearDownClass" finished-at="2022-05-04T15:07:34 EET" duration-ms="7" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- tests.SearchProductTest -->
-      <class name="tests.ChangeCurrencyTest">
-        <test-method is-config="true" signature="startDriver(java.lang.String)[pri:0, instance:tests.ChangeCurrencyTest@10683d9d]" started-at="2022-05-04T15:07:09 EET" name="startDriver" finished-at="2022-05-04T15:07:17 EET" duration-ms="8126" status="PASS">
+        </test-method> <!-- stopDriver -->
+      </class> <!-- tests.UserRegistrationParellelTesting -->
+    </test> <!-- Firefox Regression Test -->
+    <test started-at="2022-05-11T05:23:02 EET" name="Chrome Regression Test" finished-at="2022-05-11T05:23:02 EET" duration-ms="590">
+      <class name="tests.UserRegistrationParellelTesting">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.UserRegistrationParellelTesting@421056e5]" started-at="2022-05-11T05:23:02 EET" name="setUp" finished-at="2022-05-11T05:23:02 EET" duration-ms="36" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -85,121 +178,158 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.Error">
+            <message>
+              <![CDATA[Unresolved compilation problems: 
+Illegal modifier for parameter USERNAME; only final is permitted
+Illegal modifier for parameter ACCESS_KEY; only final is permitted
+Illegal modifier for parameter SauceURL; only final is permitted
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Error: Unresolved compilation problems: 
+Illegal modifier for parameter USERNAME; only final is permitted
+Illegal modifier for parameter ACCESS_KEY; only final is permitted
+Illegal modifier for parameter SauceURL; only final is permitted
+
+at tests.TestBase2.setUp(TestBase2.java:50)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:65)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:381)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:319)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:178)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Error -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startDriver -->
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:tests.ChangeCurrencyTest@10683d9d]" started-at="2022-05-04T15:07:17 EET" name="setUpClass" finished-at="2022-05-04T15:07:17 EET" duration-ms="301" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@60ae7cf2]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- setUp -->
+        <test-method signature="UserCanRegisterSuccssfully()[pri:1, instance:tests.UserRegistrationParellelTesting@421056e5]" started-at="2022-05-11T05:23:02 EET" name="UserCanRegisterSuccssfully" finished-at="2022-05-11T05:23:02 EET" duration-ms="1" status="SKIP">
+          <exception class="java.lang.Error">
+            <message>
+              <![CDATA[Unresolved compilation problems: 
+Illegal modifier for parameter USERNAME; only final is permitted
+Illegal modifier for parameter ACCESS_KEY; only final is permitted
+Illegal modifier for parameter SauceURL; only final is permitted
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Error: Unresolved compilation problems: 
+Illegal modifier for parameter USERNAME; only final is permitted
+Illegal modifier for parameter ACCESS_KEY; only final is permitted
+Illegal modifier for parameter SauceURL; only final is permitted
+
+at tests.TestBase2.setUp(TestBase2.java:50)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:65)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:381)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:319)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:178)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Error -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method signature="UserCanChangeCurrencyOfProduct()[pri:1, instance:tests.ChangeCurrencyTest@10683d9d]" started-at="2022-05-04T15:07:17 EET" name="UserCanChangeCurrencyOfProduct" finished-at="2022-05-04T15:07:19 EET" duration-ms="1293" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- UserCanChangeCurrencyOfProduct -->
-        <test-method is-config="true" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.ChangeCurrencyTest@10683d9d]" started-at="2022-05-04T15:07:19 EET" name="screenshotOnFailure" finished-at="2022-05-04T15:07:19 EET" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=UserCanChangeCurrencyOfProduct status=SUCCESS method=ChangeCurrencyTest.UserCanChangeCurrencyOfProduct()[pri:1, instance:tests.ChangeCurrencyTest@10683d9d] output={null}]]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- UserCanRegisterSuccssfully -->
+        <test-method is-config="true" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.UserRegistrationParellelTesting@421056e5]" started-at="2022-05-11T05:23:02 EET" name="screenshotOnFailure" finished-at="2022-05-11T05:23:02 EET" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- screenshotOnFailure -->
-        <test-method signature="UserCanSearchWithAutoComplete()[pri:2, instance:tests.ChangeCurrencyTest@10683d9d]" started-at="2022-05-04T15:07:19 EET" name="UserCanSearchWithAutoComplete" finished-at="2022-05-04T15:07:22 EET" duration-ms="3185" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- UserCanSearchWithAutoComplete -->
-        <test-method is-config="true" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.ChangeCurrencyTest@10683d9d]" started-at="2022-05-04T15:07:22 EET" name="screenshotOnFailure" finished-at="2022-05-04T15:07:22 EET" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=UserCanSearchWithAutoComplete status=SUCCESS method=ChangeCurrencyTest.UserCanSearchWithAutoComplete()[pri:2, instance:tests.ChangeCurrencyTest@10683d9d] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- screenshotOnFailure -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:tests.ChangeCurrencyTest@10683d9d]" started-at="2022-05-04T15:07:22 EET" name="tearDownClass" finished-at="2022-05-04T15:07:22 EET" duration-ms="17" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownClass -->
-        <test-method is-config="true" signature="stopDriver()[pri:0, instance:tests.ChangeCurrencyTest@10683d9d]" started-at="2022-05-04T15:07:34 EET" name="stopDriver" finished-at="2022-05-04T15:07:34 EET" duration-ms="702" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopDriver -->
-      </class> <!-- tests.ChangeCurrencyTest -->
-      <class name="tests.UserRegistrationTestWithDDTAndJavaFaker">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:tests.UserRegistrationTestWithDDTAndJavaFaker@6d1dcdff]" started-at="2022-05-04T15:07:22 EET" name="setUpClass" finished-at="2022-05-04T15:07:22 EET" duration-ms="20" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@60ae7cf2]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method signature="UserCanRegisterSuccessfully()[pri:1, instance:tests.UserRegistrationTestWithDDTAndJavaFaker@6d1dcdff]" started-at="2022-05-04T15:07:22 EET" name="UserCanRegisterSuccessfully" finished-at="2022-05-04T15:07:25 EET" duration-ms="3305" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- UserCanRegisterSuccessfully -->
-        <test-method is-config="true" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.UserRegistrationTestWithDDTAndJavaFaker@6d1dcdff]" started-at="2022-05-04T15:07:25 EET" name="screenshotOnFailure" finished-at="2022-05-04T15:07:25 EET" duration-ms="7" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=UserCanRegisterSuccessfully status=SUCCESS method=UserRegistrationTestWithDDTAndJavaFaker.UserCanRegisterSuccessfully()[pri:1, instance:tests.UserRegistrationTestWithDDTAndJavaFaker@6d1dcdff] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- screenshotOnFailure -->
-        <test-method signature="RegisteredUserCanLogout()[pri:0, instance:tests.UserRegistrationTestWithDDTAndJavaFaker@6d1dcdff]" started-at="2022-05-04T15:07:25 EET" name="RegisteredUserCanLogout" finished-at="2022-05-04T15:07:26 EET" depends-on-methods="tests.UserRegistrationTestWithDDTAndJavaFaker.UserCanRegisterSuccessfully" duration-ms="1182" status="PASS">
+        <test-method signature="RegisteredUserCanLogout()[pri:0, instance:tests.UserRegistrationParellelTesting@421056e5]" started-at="2022-05-11T05:23:02 EET" name="RegisteredUserCanLogout" finished-at="2022-05-11T05:23:02 EET" depends-on-methods="tests.UserRegistrationParellelTesting.UserCanRegisterSuccssfully" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method tests.UserRegistrationParellelTesting.RegisteredUserCanLogout() on instance tests.UserRegistrationParellelTesting@421056e5 depends on not successfully finished methods 
+[tests.UserRegistrationParellelTesting.UserCanRegisterSuccssfully() on instance tests.UserRegistrationParellelTesting@421056e5]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method tests.UserRegistrationParellelTesting.RegisteredUserCanLogout() on instance tests.UserRegistrationParellelTesting@421056e5 depends on not successfully finished methods 
+[tests.UserRegistrationParellelTesting.UserCanRegisterSuccssfully() on instance tests.UserRegistrationParellelTesting@421056e5]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:149)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- RegisteredUserCanLogout -->
-        <test-method is-config="true" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.UserRegistrationTestWithDDTAndJavaFaker@6d1dcdff]" started-at="2022-05-04T15:07:26 EET" name="screenshotOnFailure" finished-at="2022-05-04T15:07:26 EET" duration-ms="2" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=RegisteredUserCanLogout status=SUCCESS method=UserRegistrationTestWithDDTAndJavaFaker.RegisteredUserCanLogout()[pri:0, instance:tests.UserRegistrationTestWithDDTAndJavaFaker@6d1dcdff] output={null}]]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="RegisteredUserCanLogin()[pri:0, instance:tests.UserRegistrationParellelTesting@421056e5]" started-at="2022-05-11T05:23:02 EET" name="RegisteredUserCanLogin" finished-at="2022-05-11T05:23:02 EET" depends-on-methods="tests.UserRegistrationParellelTesting.RegisteredUserCanLogout" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method tests.UserRegistrationParellelTesting.RegisteredUserCanLogin() on instance tests.UserRegistrationParellelTesting@421056e5 depends on not successfully finished methods 
+[tests.UserRegistrationParellelTesting.RegisteredUserCanLogout() on instance tests.UserRegistrationParellelTesting@421056e5]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method tests.UserRegistrationParellelTesting.RegisteredUserCanLogin() on instance tests.UserRegistrationParellelTesting@421056e5 depends on not successfully finished methods 
+[tests.UserRegistrationParellelTesting.RegisteredUserCanLogout() on instance tests.UserRegistrationParellelTesting@421056e5]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:149)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- screenshotOnFailure -->
-        <test-method signature="RergisteredUserCanLogin()[pri:0, instance:tests.UserRegistrationTestWithDDTAndJavaFaker@6d1dcdff]" started-at="2022-05-04T15:07:26 EET" name="RergisteredUserCanLogin" finished-at="2022-05-04T15:07:29 EET" depends-on-methods="tests.UserRegistrationTestWithDDTAndJavaFaker.RegisteredUserCanLogout" duration-ms="2669" status="PASS">
+        </test-method> <!-- RegisteredUserCanLogin -->
+        <test-method is-config="true" signature="stopDriver()[pri:0, instance:tests.UserRegistrationParellelTesting@421056e5]" started-at="2022-05-11T05:23:02 EET" name="stopDriver" finished-at="2022-05-11T05:23:02 EET" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- RergisteredUserCanLogin -->
-        <test-method is-config="true" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.UserRegistrationTestWithDDTAndJavaFaker@6d1dcdff]" started-at="2022-05-04T15:07:29 EET" name="screenshotOnFailure" finished-at="2022-05-04T15:07:29 EET" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=RergisteredUserCanLogin status=SUCCESS method=UserRegistrationTestWithDDTAndJavaFaker.RergisteredUserCanLogin()[pri:0, instance:tests.UserRegistrationTestWithDDTAndJavaFaker@6d1dcdff] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- screenshotOnFailure -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:tests.UserRegistrationTestWithDDTAndJavaFaker@6d1dcdff]" started-at="2022-05-04T15:07:29 EET" name="tearDownClass" finished-at="2022-05-04T15:07:29 EET" duration-ms="6" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- tests.UserRegistrationTestWithDDTAndJavaFaker -->
-    </test> <!-- Regression Suite Test -->
-  </suite> <!-- nopcommerce Regression Suite -->
+        </test-method> <!-- stopDriver -->
+      </class> <!-- tests.UserRegistrationParellelTesting -->
+    </test> <!-- Chrome Regression Test -->
+  </suite> <!-- Regression Suite -->
 </testng-results>

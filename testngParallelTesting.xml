@@ -1,0 +1,39 @@
+<!--<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite  name="nopcommerce Regression Suite" parallel="tests" thread-count="3"> 
+
+  	 <test name="chrome Regression Test" >
+		<parameter name="browser" value="chrome"> </parameter>
+   		 <classes>
+    	 	 <class name="tests.UserRegistrationParellelTesting"/>
+	 </classes>
+ 	</test>
+-->
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Suite" parallel="tests" thread-count="2">
+
+	<test name="Chrome Regression Test">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="tests.UserRegistrationParellelTesting" />
+		</classes>
+	</test>
+
+
+	<test name="Firefox Regression Test">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="tests.UserRegistrationParellelTesting" />
+		</classes>
+	</test>
+
+
+
+	<!-- 
+	<test name="edge Regression Test">
+		<parameter name="browser" value="edge"> </parameter>
+   	 <classes>
+    	  <class name="tests.UserRegistrationParellelTesting"/>
+    	</classes>
+  	</test>
+-->
+</suite> 
